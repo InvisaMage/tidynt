@@ -1,0 +1,84 @@
+/* Proudly Coded by Travis Kipp */
+/* Created November 7, 2016 */
+/* TidyNT Theme */
+
+body {
+  background-color: #4d4d4d;
+  color: white;
+}
+
+/* Every Element */
+* {
+	outline: 0;
+}
+
+/* Link colors */
+ .link:link, .link:visited {
+  color: #66a3ff;
+}
+.link:hover {
+  color: #a3ff66;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.offset-top {
+  padding-top: 15%;
+}
+
+.search-icon {
+  background-color: #FFFFFF;
+}
+
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+
+.dropdown-item:hover {
+	background-color: #b8bfc6;
+}
+
+.nav-button {
+  border:0;
+}
+.nav-button:hover {
+  color: #fff;
+}
+
+/* Dark Modals */
+.modal-content {
+  position: relative;
+  background-color: #343a40;
+  border: 1px solid rgba(0,0,0,.125);
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  outline: 0;
+}
+.modal-header {
+	background-color: #32383E;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+	border-top-left-radius: .50rem;
+	border-top-right-radius: .50rem;
+}
+.modal-footer {
+	background-color: #32383E;
+  padding: 15px;
+  border-top: 1px solid rgba(0,0,0,.125);
+	border-bottom-left-radius: .50rem;
+	border-bottom-right-radius: .50rem;
+}
+.modal-title {
+  color: white;
+}

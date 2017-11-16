@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--Proudly coded by Travis Kipp-->
+<!--Created November 6, 2017-->
+<!--Home-->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="#66a3ff">
+		<link rel="icon" href="icons/favicon.ico" type="image/.ico"/>
+		<title>New Tab</title>
+		<!--Stylesheets-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<!--iOS Bookmark Image-->
+		<link rel="apple-touch-icon" sizes="152x152" href="images/imlogo.png">
+	</head>
+
+	<body id="top">
+		<!--Navigation-->
+		<div class="pos-f-t">
+		  <div class="collapse" id="navbarToggleInfo">
+		    <div class="bg-dark p-4">
+		      <h4 class="text-white">
+						TidyNT
+					</h4>
+		      <span class="text-muted">
+						A Tidy New Tab page.<br>
+						Created by: <a class="link" href="https://invisamage.com">InvisaMage</a><br>
+						Project page: <a class="link" href="https://invisamage.com/tidynt.html">https://invisamage.com/tidynt.html</a>
+					</span>
+		    </div>
+		  </div>
+		  <nav class="navbar navbar-dark" style="background-color: #4d4d4d">
+		    <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbarToggleInfo">
+					<i class="fa fa-info-circle" aria-hidden="true"></i>
+		    </button>
+
+				<button class="navbar-toggler nav-button" id="settings-button" type="button">
+		      <i class="fa fa-cog" aria-hidden="true"></i>
+		    </button>
+		  </nav>
+		</div>
+
+		<!--Start of Content-->
+		<div class="container">
+
+			<!--Search bar-->
+			<div class="row mr-auto offset-top">
+			  <div class="col-lg-12">
+			    <div class="input-group input-group-md">
+			      <div class="input-group-btn" id="search-dropdown">
+			        <button type="button" class="btn btn-dark dropdown-toggle" id="search-dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          DuckDuckGo
+			        </button>
+			        <div class="dropdown-menu" id="dropdown-menu">
+			          <a class="dropdown-item" id="dropdown-duckduckgo" href="#">DuckDuckGo</a>
+			          <a class="dropdown-item" id="dropdown-google" href="#">Google</a>
+			          <a class="dropdown-item" id="dropdown-bing" href="#">Bing</a>
+			          <a class="dropdown-item" id="dropdown-yahoo" href="#">Yahoo</a>
+								<div role="separator" class="dropdown-divider"></div>
+								<a class="dropdown-item" id="dropdown-wikipedia" href="#">Wikipedia</a>
+								<a class="dropdown-item" id="dropdown-twitter" href="#">Twitter</a>
+			        </div>
+			      </div>
+			      <input type="text" class="form-control" id="search" placeholder="&#xf002; Search the Web" style="font-family:Arial, FontAwesome">
+						<span class="input-group-btn">
+			        <i class="fa fa-search" aria-hidden="true"></i>
+			      </span>
+						<span class="input-group-btn">
+			        <button class="btn btn-primary" id="search-button-input" type="button">
+								<i class="fa fa-arrow-right" aria-hidden="true"></i>
+							</button>
+			      </span>
+			    </div>
+			  </div>
+			</div>
+		</div><!--/.container-->
+
+		<!--External Scripts-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/main.js"></script>
+
+		<!--If scripts fail to load display JS required message-->
+		<noscript>
+      JavaScript Needed
+		</noscript>
+
+	</body>
+</html>

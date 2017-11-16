@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "author": "InvisaMage",
+  "description": "A Tidy New Tab page.",
+  "name": "TidyNT",
+  "version": "0.2",
+  "homepage_url": "https://invisamage.com/tidynt.html",
+  "icons": {
+    "48": "icons/logo.png"
+  },
+
+  "permissions": ["storage"],
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "{4b2c6d30-083b-4a26-aa9d-296de9dc3961}",
+      "strict_min_version": "55.0"
+    }
+  }
+}
