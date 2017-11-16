@@ -3,9 +3,9 @@
 /* Main JavaScript */
 
 //Storage get
-var customSearchName = browser.storage.local.get('customSearchName');
-var customSearchUrl = browser.storage.local.get('customSearchUrl');
-var backgroundColor = browser.storage.local.get('backgroundColor');
+var customSearchName = chrome.storage.local.get('customSearchName');
+var customSearchUrl = chrome.storage.local.get('customSearchUrl');
+var backgroundColor = chrome.storage.local.get('backgroundColor');
 
 //Add custom search to dropdown if present
 customSearchName.then((res) => {
@@ -23,7 +23,7 @@ document.getElementById("search").addEventListener("keydown", function(e){
 });
 
 //Listens for settings change - reloads page
-browser.storage.onChanged.addListener(callback);
+chrome.storage.onChanged.addListener(callback);
 function callback() {
   location.reload();
 }
@@ -97,8 +97,8 @@ function openSettings() {
 }
 
 function search() {
-  var customSearchName = browser.storage.local.get('customSearchName');
-  var customSearchUrl = browser.storage.local.get('customSearchUrl');
+  var customSearchName = chrome.storage.local.get('customSearchName');
+  var customSearchUrl = chrome.storage.local.get('customSearchUrl');
   customSearchName.then((res) => {
     valueCustomSearchName = res.customSearchName;
   });
