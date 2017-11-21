@@ -9,7 +9,7 @@ var backgroundColor = browser.storage.local.get('backgroundColor');
 
 //Add custom search to dropdown if present
 customSearchName.then((res) => {
-  if (res.customSearchName != undefined) {
+  if (res.customSearchName != undefined && res.customSearchName != '' && res.customSearchName != '') {
     $("#dropdown-menu").prepend("<a class='dropdown-item' id='dropdown-custom' href='#'>" + res.customSearchName + "</a>" );
   }  
 });

@@ -3,10 +3,10 @@
   "author": "InvisaMage",
   "description": "A Tidy New Tab page.",
   "name": "TidyNT",
-  "version": "0.2",
+  "version": "0.2.1",
   "homepage_url": "https://invisamage.com/tidynt.html",
   "icons": {
-    "48": "icons/logo.png"
+    "48": "icons/logo-48.png"
   },
 
   "permissions": ["storage"],
