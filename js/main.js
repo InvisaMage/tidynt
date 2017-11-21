@@ -3,9 +3,9 @@
 /* Main JavaScript */
 
 //Storage get
-var customSearchName = chrome.storage.local.get('customSearchName');
-var customSearchUrl = chrome.storage.local.get('customSearchUrl');
-var backgroundColor = chrome.storage.local.get('backgroundColor');
+var customSearchName = browser.storage.local.get('customSearchName');
+var customSearchUrl = browser.storage.local.get('customSearchUrl');
+var backgroundColor = browser.storage.local.get('backgroundColor');
 
 //Add custom search to dropdown if present
 customSearchName.then((res) => {
@@ -23,7 +23,7 @@ document.getElementById("search").addEventListener("keydown", function(e){
 });
 
 //Listens for settings change - reloads page
-chrome.storage.onChanged.addListener(callback);
+browser.storage.onChanged.addListener(callback);
 function callback() {
   location.reload();
 }
@@ -93,12 +93,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openSettings() {
-  chrome.runtime.openOptionsPage();
+  browser.runtime.openOptionsPage();
 }
 
 function search() {
-  var customSearchName = chrome.storage.local.get('customSearchName');
-  var customSearchUrl = chrome.storage.local.get('customSearchUrl');
+  var customSearchName = browser.storage.local.get('customSearchName');
+  var customSearchUrl = browser.storage.local.get('customSearchUrl');
   customSearchName.then((res) => {
     valueCustomSearchName = res.customSearchName;
   });
@@ -107,26 +107,26 @@ function search() {
   });
 
   if (document.getElementById("search-dropdown-button").textContent.trim() == 'DuckDuckGo') {
-    chrome.tabs.update({url: "https://duckduckgo.com/?q="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://duckduckgo.com/?q="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == 'Google') {
-    chrome.tabs.update({url: "https://www.google.com/search?q="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://www.google.com/search?q="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == 'Bing') {
-    chrome.tabs.update({url: "https://www.bing.com/search?q="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://www.bing.com/search?q="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == 'Yahoo') {
-    chrome.tabs.update({url: "https://search.yahoo.com/search?p="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://search.yahoo.com/search?p="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == 'Wikipedia') {
-    chrome.tabs.update({url: "https://en.wikipedia.org/wiki/Special:Search?search="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://en.wikipedia.org/wiki/Special:Search?search="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == 'Twitter') {
-    chrome.tabs.update({url: "https://twitter.com/search?q="+ document.getElementById("search").value});
+    browser.tabs.update({url: "https://twitter.com/search?q="+ document.getElementById("search").value});
   }
   else if (document.getElementById("search-dropdown-button").textContent.trim() == valueCustomSearchName) {
     customSearchUrl.then((res) => {
-      chrome.tabs.update({url: valueCustomSearchUrl + document.getElementById("search").value});
+      browser.tabs.update({url: valueCustomSearchUrl + document.getElementById("search").value});
     });
   }
 }
